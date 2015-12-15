@@ -10,11 +10,27 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel": "^6.3.13",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-typecheck": "^3.5.1",
     "body-parser": "^1.14.1",
+    "css-loader": "^0.23.0",
     "e": "0.0.4",
     "express": "^4.13.3",
+    "flowcheck": "^0.2.7",
+    "flowcheck-loader": "^1.0.0",
+    "history": "^1.16.0",
+    "jsx": "^0.9.89",
+    "jsx-loader": "^0.13.2",
     "mongoose": "^4.3.1",
     "morgan": "^1.6.1",
-    "request": "^2.67.0"
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-router": "^1.0.2",
+    "react-timer-mixin": "^0.13.3",
+    "request": "^2.67.0",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
   }
 }

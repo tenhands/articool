@@ -15,15 +15,15 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http){
     }).then(function successCallback(response){
       var articleText = response.data.text;
 
-      // $http({
-      //   method: 'POST',
-      //   url: 'http://text-processing.com/api/sentiment/',
-      //   data: {text: articleText}
-      // }).then(function(res){
-      //   console.log(res);
-      // })
+      $scope.words = articleText.split(" ")
+      console.log($scope.words);
 
-      console.log(response.data.text)
+      $scope.timer = 1000;
+      $scope.interval = function() {
+        $scope.timer +=1000;
+      }
+
+
     }, function errorCallback(response){
       console.log('error');
     });

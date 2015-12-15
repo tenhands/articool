@@ -21,10 +21,11 @@ app.listen(3000, function(){
   console.log('listening on port 3000');
 });
 
-app.get('/api/sentiment', function (req, res){
-  res.send('hello');
-
-});
+// app.get('/api/sentiment', function (req, res){
+//   res.send('hello');
+//
+// 
+// });
 
 // start here
 app.get('/users', function (req, res) {
