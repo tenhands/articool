@@ -29,9 +29,9 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http){
       }).then(function(response){
         console.log(response);
         if (response.data.label == "pos") {
-          $scope.rating = "+";
-        } else if (reponse.data.label == "neg") {
-          $scope.rating = "-";
+          $scope.rating = "positive";
+        } else if (response.data.label == "neg") {
+          $scope.rating = "negative";
         } else {
           $scope.rating = "neutral";
         }
