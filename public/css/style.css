@@ -2,3 +2,9 @@
   display: inline-block;
   margin-right: 4px;
 }
+
+.option {
+    -webkit-animation-duration: 3s;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-iteration-count: 5;
+}

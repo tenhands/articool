@@ -8,6 +8,7 @@ var express = require('express'),
 app.use(express.static('public'));
 app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json())
 
 mongoose.connect('mongodb://localhost/angularApp', function (err) {
       if(err){
@@ -24,7 +25,7 @@ app.listen(3000, function(){
 // app.get('/api/sentiment', function (req, res){
 //   res.send('hello');
 //
-// 
+//
 // });
 
 // start here
@@ -44,3 +45,14 @@ app.post('/users', function (req, res) {
     }
   });
 });
+
+app.post('/api/sentiment', function (req, res){
+  var articleText = req.body.text;
+
+  request.post({url:'http://text-processing.com/api/sentiment/', formData: {text: articleText}}, function (err, httpResponse, body){
+    console.log(body);
+
+    res.send(body);
+  })
+
+})
