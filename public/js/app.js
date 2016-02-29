@@ -24,7 +24,7 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http){
 
       $http({
         method: 'POST',
-        url: 'http://localhost:3000/api/sentiment',
+        url: '/api/sentiment',
         data: {text: articleText}
       }).then(function(response){
         if (response.data.label == "pos") {
