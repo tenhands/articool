@@ -5,7 +5,7 @@ const app = angular.module('ArticleApp', []);
 
 app.controller('MainController', ['$scope', '$http', function($scope, $http){
   $scope.getHTMLText = function(){
-    var baseUrl = 'http://gateway-a.watsonplatform.net/calls/url/URLGetText';
+    var baseUrl = 'https://gateway-a.watsonplatform.net/calls/url/URLGetText';
     var userUrl = $scope.website;
     var apiKey = '1228983088573368107c9bd01aef3f5c654df25e';
 
@@ -27,7 +27,6 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http){
         url: 'http://localhost:3000/api/sentiment',
         data: {text: articleText}
       }).then(function(response){
-        console.log(response);
         if (response.data.label == "pos") {
           $scope.rating = "positive";
         } else if (response.data.label == "neg") {
